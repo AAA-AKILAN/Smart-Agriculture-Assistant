@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* AgriSmart AI - Agriculture Decision Support System Design System */
+
+@layer base {
+  :root {
+    /* Agriculture-inspired green palette */
+    --background: 120 20% 98%;
+    --foreground: 150 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 150 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 30% 15%;
+
+    /* Fresh green primary */
+    --primary: 142 55% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Soft earthy secondary */
+    --secondary: 80 30% 92%;
+    --secondary-foreground: 150 30% 20%;
+
+    --muted: 120 15% 94%;
+    --muted-foreground: 150 10% 45%;
+
+    /* Warm accent */
+    --accent: 45 90% 55%;
+    --accent-foreground: 30 50% 20%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 120 15% 88%;
+    --input: 120 15% 88%;
+    --ring: 142 55% 35%;
+
+    --radius: 0.75rem;
+
+    /* Sidebar */
+    --sidebar-background: 120 20% 96%;
+    --sidebar-foreground: 150 30% 20%;
+    --sidebar-primary: 142 55% 35%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 80 30% 90%;
+    --sidebar-accent-foreground: 150 30% 20%;
+    --sidebar-border: 120 15% 88%;
+    --sidebar-ring: 142 55% 35%;
+
+    /* Chart colors - agriculture themed */
+    --chart-1: 142 55% 40%;
+    --chart-2: 80 50% 50%;
+    --chart-3: 45 85% 55%;
+    --chart-4: 25 70% 50%;
+    --chart-5: 200 60% 50%;
+
+    /* Custom tokens */
+    --success: 142 70% 45%;
+    --success-foreground: 0 0% 100%;
+    --warning: 45 100% 50%;
+    --warning-foreground: 30 50% 15%;
+    --info: 200 80% 50%;
+    --info-foreground: 0 0% 100%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(142 55% 35%) 0%, hsl(80 50% 45%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(120 20% 98%) 100%);
+    --gradient-overlay: linear-gradient(180deg, hsl(0 0% 0% / 0.1) 0%, hsl(0 0% 0% / 0.6) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(150 30% 15% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(150 30% 15% / 0.1), 0 2px 4px -2px hsl(150 30% 15% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(150 30% 15% / 0.1), 0 4px 6px -4px hsl(150 30% 15% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(150 30% 15% / 0.1), 0 8px 10px -6px hsl(150 30% 15% / 0.1);
+    --shadow-glow: 0 0 20px hsl(142 55% 35% / 0.3);
+
+    /* Fonts */
+    --font-sans: 'Poppins', 'Noto Sans Tamil', system-ui, sans-serif;
+    --font-tamil: 'Noto Sans Tamil', 'Poppins', sans-serif;
+  }
+
+  .dark {
+    --background: 150 20% 8%;
+    --foreground: 120 20% 95%;
+
+    --card: 150 20% 12%;
+    --card-foreground: 120 20% 95%;
+
+    --popover: 150 20% 12%;
+    --popover-foreground: 120 20% 95%;
+
+    --primary: 142 55% 45%;
+    --primary-foreground: 150 30% 10%;
+
+    --secondary: 150 15% 20%;
+    --secondary-foreground: 120 20% 90%;
+
+    --muted: 150 15% 18%;
+    --muted-foreground: 120 10% 60%;
+
+    --accent: 45 80% 50%;
+    --accent-foreground: 30 50% 10%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 150 15% 20%;
+    --input: 150 15% 22%;
+    --ring: 142 55% 45%;
+
+    --sidebar-background: 150 20% 10%;
+    --sidebar-foreground: 120 20% 90%;
+    --sidebar-primary: 142 55% 45%;
+    --sidebar-primary-foreground: 150 30% 10%;
+    --sidebar-accent: 150 15% 18%;
+    --sidebar-accent-foreground: 120 20% 90%;
+    --sidebar-border: 150 15% 20%;
+    --sidebar-ring: 142 55% 45%;
+
+    --chart-1: 142 55% 50%;
+    --chart-2: 80 50% 55%;
+    --chart-3: 45 85% 60%;
+    --chart-4: 25 70% 55%;
+    --chart-5: 200 60% 55%;
+
+    --success: 142 70% 50%;
+    --success-foreground: 150 30% 10%;
+    --warning: 45 100% 55%;
+    --warning-foreground: 30 50% 10%;
+    --info: 200 80% 55%;
+    --info-foreground: 150 30% 10%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(142 55% 40%) 0%, hsl(80 50% 40%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(150 20% 12%) 0%, hsl(150 20% 10%) 100%);
+    --gradient-overlay: linear-gradient(180deg, hsl(0 0% 0% / 0.2) 0%, hsl(0 0% 0% / 0.8) 100%);
+
+    --shadow-glow: 0 0 20px hsl(142 55% 45% / 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Tamil font support */
+  .font-tamil {
+    font-family: var(--font-tamil);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-hero);
+  }
+
+  .bg-gradient-hero {
+    background-image: var(--gradient-hero);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Premium Glassmorphism Utilities */
+  .glass {
+    @apply backdrop-blur-md bg-white/10 border border-white/20 shadow-xl;
+  }
+  
+  .glass-dark {
+    @apply backdrop-blur-md bg-black/30 border border-white/10 shadow-2xl;
+  }
+
+  .glass-card {
+    @apply backdrop-blur-lg bg-card/60 border border-border/50 shadow-lg hover:shadow-glow transition-all duration-300;
+  }
+
+  .text-shadow-premium {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
